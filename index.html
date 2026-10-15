@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="مطعم ومسمط البرديسي - أصالة الأكل البلدي المصري في قلب حدائق الأهرام. كوارع، ممبار، حمام، مشويات. مفتوح 24 ساعة.">
+  <meta name="theme-color" content="#2E2318">
+  <title>مطعم ومسمط البرديسي | Al Bardisi Restaurant</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">البرديسي</div>
+      <div class="preloader-spinner"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="logo">
+        <span class="logo-main">البرديسي</span>
+        <span class="logo-sub">Al Bardisi</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">عننا</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="nav_menu">المنيو</a></li>
+          <li><a href="#branches" class="nav-link" data-i18n="nav_branches">فروعنا</a></li>
+          <li><a href="#reviews" class="nav-link" data-i18n="nav_reviews">التقييمات</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">تواصل معانا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch Language">
+          <i class="fa-solid fa-globe"></i>
+          <span id="langLabel">EN</span>
+        </button>
+        <a href="tel:01002862600" class="btn btn-gold btn-sm header-cta">
+          <i class="fa-solid fa-phone"></i>
+          <span data-i18n="header_order">اطلب دلوقتي</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Bottom Bar -->
+  <div class="mobile-bar">
+    <a href="tel:01002862600" class="mobile-bar-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span data-i18n="call_now">اتصل بينا</span>
+    </a>
+    <a href="https://wa.me/201002862600" target="_blank" class="mobile-bar-btn whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span data-i18n="whatsapp">واتساب</span>
+    </a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge" data-i18n="hero_badge">⭐ تقييم 4.3 على جوجل</span>
+        <h1 class="hero-title" data-i18n="hero_title">أصالة المسمط المصري من قلب حدائق الأهرام</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">كوارع • ممبار • حمام • مشويات — مفتوح 24 ساعة</p>
+        <div class="hero-buttons">
+          <a href="tel:01002862600" class="btn btn-gold btn-lg">
+            <i class="fa-solid fa-phone"></i>
+            <span data-i18n="call_now">اتصل بينا</span>
+          </a>
+          <a href="#menu" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-utensils"></i>
+            <span data-i18n="view_menu">شوف المنيو</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Features Bar -->
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <i class="fa-solid fa-clock"></i>
+        <h3 data-i18n="feat_hours">مفتوح 24 ساعة</h3>
+        <p data-i18n="feat_hours_sub">طوال أيام الأسبوع</p>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-star"></i>
+        <h3 data-i18n="feat_rating">تقييم 4.3</h3>
+        <p data-i18n="feat_rating_sub">على جوجل مابس</p>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-fire"></i>
+        <h3 data-i18n="feat_food">أكل بلدي أصيل</h3>
+        <p data-i18n="feat_food_sub">طعم البيت الأصلي</p>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-wallet"></i>
+        <h3 data-i18n="feat_price">أسعار في المتناول</h3>
+        <p data-i18n="feat_price_sub">قيمة مقابل الجودة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-image reveal">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="أكل بلدي مصري" loading="lazy">
+        <div class="about-badge">
+          <span class="about-badge-num">+20</span>
+          <span class="about-badge-txt" data-i18n="about_years">سنة خبرة</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-tag" data-i18n="about_tag">عننا</span>
+        <h2 class="section-title" data-i18n="about_title">قصة مسمط البرديسي</h2>
+        <p data-i18n="about_p1">من قلب حدائق الأهرام، بنقدم أكل بلدي مصري أصيل بطعم البيت. الكوارع، الممبار، الحمام، والمشويات — كلها بتتحضر يوميًا بأجود المكونات وأيدي خبرة.</p>
+        <p data-i18n="about_p2">عندنا كل حاجة بتعشقها في الأكل المصري: النظافة، الطعم الأصيل، والخدمة اللي تخليك تحس إنك في بيتك.</p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about_li1">مكونات طازجة يوميًا</span></li>
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about_li2">وصفات بلدي أصيلة</span></li>
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about_li3">خدمة 24 ساعة</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu section section-dark" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="menu_tag">المنيو</span>
+        <h2 class="section-title" data-i18n="menu_title">أشهر أطباقنا</h2>
+        <p class="section-desc" data-i18n="menu_desc">أطباق بلدي أصيلة بتتحضر بحب وشغف</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80" alt="كوارع" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_1_name">كوارع</h3>
+            <p data-i18n="dish_1_desc">كوارع طرية مستوية على البخار مع مرقة غنية</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&q=80" alt="ممبار" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_2_name">ممبار</h3>
+            <p data-i18n="dish_2_desc">ممبار محشي بالأرز والتوابل، مقرمش من بره وطري من جوه</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="حمام مشوي" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_3_name">حمام مشوي</h3>
+            <p data-i18n="dish_3_desc">حمام بلدي مشوي على الفحم مع أرز محشي</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="كباب وكفتة" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_4_name">كباب وكفتة</h3>
+            <p data-i18n="dish_4_desc">مشويات بلدي على الفحم مع طحينة وسلطات</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="طاجن لحمة" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_5_name">طاجن لحمة بالخضار</h3>
+            <p data-i18n="dish_5_desc">لحمة بلدي مطبوخة في الطاجن مع خضار طازة</p>
+          </div>
+        </div>
+
+        <div class="menu-card reveal">
+          <div class="menu-card-img">
+            <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?w=600&q=80" alt="مشويات مشكلة" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 data-i18n="dish_6_name">مشويات مشكلة</h3>
+            <p data-i18n="dish_6_desc">تشكيلة مشويات كاملة تكفي العيلة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section class="branches section" id="branches">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="branch_tag">فروعنا</span>
+        <h2 class="section-title" data-i18n="branch_title">زورنا في أقرب فرع</h2>
+        <p class="section-desc" data-i18n="branch_desc">فرعين في قلب حدائق الأهرام</p>
+      </div>
+
+      <div class="branches-grid">
+        <div class="branch-card reveal">
+          <div class="branch-num">01</div>
+          <h3 data-i18n="branch_1_name">فرع البوابة الثانية</h3>
+          <p class="branch-address">
+            <i class="fa-solid fa-location-dot"></i>
+            <span data-i18n="branch_1_addr">البوابة الثانية، حدائق الأهرام، الجيزة</span>
+          </p>
+          <p class="branch-status">
+            <span class="status-dot"></span>
+            <span data-i18n="open_24">مفتوح 24 ساعة</span>
+          </p>
+          <div class="branch-actions">
+            <a href="tel:01002862600" class="btn btn-gold btn-sm">
+              <i class="fa-solid fa-phone"></i>
+              <span data-i18n="call">اتصل</span>
+            </a>
+            <a href="https://wa.me/201002862600" target="_blank" class="btn btn-green btn-sm">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="whatsapp">واتساب</span>
+            </a>
+            <a href="https://maps.google.com/?q=Al+Bardisi+Restaurant+Gate+2+Hadayek+Al+Ahram" target="_blank" class="btn btn-outline-dark btn-sm">
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              <span data-i18n="directions">الاتجاهات</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="branch-card reveal">
+          <div class="branch-num">02</div>
+          <h3 data-i18n="branch_2_name">فرع البوابة الرابعة</h3>
+          <p class="branch-address">
+            <i class="fa-solid fa-location-dot"></i>
+            <span data-i18n="branch_2_addr">410 ن، شارع الجيش، حدائق الأهرام</span>
+          </p>
+          <p class="branch-status">
+            <span class="status-dot"></span>
+            <span data-i18n="open_24">مفتوح 24 ساعة</span>
+          </p>
+          <div class="branch-actions">
+            <span class="btn btn-disabled btn-sm" data-i18n="coming_soon">قريباً</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews section section-dark" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="reviews_tag">التقييمات</span>
+        <h2 class="section-title" data-i18n="reviews_title">الناس بتقول إيه</h2>
+        <div class="reviews-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <span>4.3 / 5 (207)</span>
+        </div>
+      </div>
+
+      <div class="reviews-slider" id="reviewsSlider">
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_1">"مطعم ممتاز يقدم أكلات جميلة جدًا نظافة في الأكل لا ايدق ولا يكفي إنك تأكل في بيتك. أنصح بهذا المطعم بشدة."</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div>
+              <strong>Ahmed Mohammed</strong>
+              <span data-i18n="review_1_date">من 6 شهور</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_2">"جوهرة مصرية أصيلة قرب حدائق الأهرام! دفعت 660 جنيه على ممبار لذيذ ومشويات وطحينة. تجربة أصيلة جدًا."</p>
+          <div class="review-author">
+            <div class="review-avatar">N</div>
+            <div>
+              <strong>N ils</strong>
+              <span data-i18n="review_2_date">من 8 شهور</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_3">"الأكل كويس والأسعار لحد ما مقبولة. تجربة بلدي أصيلة والخدمة كويسة."</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div>
+              <strong>Mohamed Adel</strong>
+              <span data-i18n="review_3_date">من 8 شهور</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <span class="section-tag" data-i18n="contact_tag">تواصل معانا</span>
+          <h2 class="section-title" data-i18n="contact_title">جاهزين نخدمك في أي وقت</h2>
+          <p data-i18n="contact_desc">اتصل بينا أو ابعتلنا على واتساب، وهنكون سعداء بخدمتك.</p>
+
+          <div class="contact-items">
+            <a href="tel:01002862600" class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong data-i18n="call_us">اتصل بينا</strong>
+                <span dir="ltr">010 02862600</span>
+              </div>
+            </a>
+            <a href="https://wa.me/201002862600" target="_blank" class="contact-item">
+              <div class="contact-icon whatsapp"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <strong data-i18n="whatsapp_us">واتساب</strong>
+                <span dir="ltr">+20 100 286 2600</span>
+              </div>
+            </a>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong data-i18n="working_hours">مواعيد العمل</strong>
+                <span data-i18n="working_hours_val">مفتوح 24 ساعة / 7 أيام</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Hadayek+Al+Ahram+Gate+2+Giza&output=embed"
+            width="100%" height="100%" style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">البرديسي</div>
+          <p data-i18n="footer_about">مطعم ومسمط البرديسي — أصالة الأكل البلدي المصري في قلب حدائق الأهرام منذ أكثر من 20 سنة.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_links">روابط سريعة</h4>
+          <ul>
+            <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="nav_about">عننا</a></li>
+            <li><a href="#menu" data-i18n="nav_menu">المنيو</a></li>
+            <li><a href="#branches" data-i18n="nav_branches">فروعنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer_contact">تواصل معانا</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer_addr">حدائق الأهرام، الجيزة</span></li>
+            <li><i class="fa-solid fa-phone"></i> <span dir="ltr">010 02862600</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span data-i18n="open_24">مفتوح 24 ساعة</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 <span data-i18n="footer_rights">مطعم ومسمط البرديسي — جميع الحقوق محفوظة</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/201002862600" target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
