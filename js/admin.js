@@ -5,7 +5,7 @@
   /* ---- CONFIG: edit these ---- */
   var CFG = {
     owner: 'akrabcoder',
-    repo: 'Al-Bardisi-Restaurant',
+    repo: 'Al-Bardisy-Restaurant',
     branch: 'main',
     password: 'change-me-123'
   };
