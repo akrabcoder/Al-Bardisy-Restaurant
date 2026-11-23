@@ -1,0 +1,25 @@
+{
+  "categories": [
+    { "id": "main", "ar": "أشهر أطباقنا", "en": "Our Signature Dishes" }
+  ],
+  "items": [
+    { "id": "d1", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
+      "ar": { "name": "كوارع", "desc": "كوارع طرية مستوية على البخار مع مرقة غنية" },
+      "en": { "name": "Kawari' (Trotters)", "desc": "Tender steamed trotters served with a rich broth" } },
+    { "id": "d2", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=600&q=80",
+      "ar": { "name": "ممبار", "desc": "ممبار محشي بالأرز والتوابل، مقرمش من بره وطري من جوه" },
+      "en": { "name": "Mumbar", "desc": "Sausage stuffed with spiced rice, crisp outside and soft inside" } },
+    { "id": "d3", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+      "ar": { "name": "حمام مشوي", "desc": "حمام بلدي مشوي على الفحم مع أرز محشي" },
+      "en": { "name": "Grilled Pigeon", "desc": "Charcoal-grilled baladi pigeon with stuffed rice" } },
+    { "id": "d4", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80",
+      "ar": { "name": "كباب وكفتة", "desc": "مشويات بلدي على الفحم مع طحينة وسلطات" },
+      "en": { "name": "Kebab & Kofta", "desc": "Charcoal-grilled meats with tahini and salads" } },
+    { "id": "d5", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80",
+      "ar": { "name": "طاجن لحمة بالخضار", "desc": "لحمة بلدي مطبوخة في الطاجن مع خضار طازة" },
+      "en": { "name": "Meat Tagine with Vegetables", "desc": "Baladi meat slow-cooked in a tagine with fresh vegetables" } },
+    { "id": "d6", "cat": "main", "price": null, "image": "https://images.unsplash.com/photo-1541529086526-db283c563270?w=600&q=80",
+      "ar": { "name": "مشويات مشكلة", "desc": "تشكيلة مشويات كاملة تكفي العيلة" },
+      "en": { "name": "Mixed Grill", "desc": "A full grill platter that feeds the whole family" } }
+  ]
+}
