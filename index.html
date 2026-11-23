@@ -158,7 +158,9 @@
         <p class="section-desc" data-i18n="menu_desc">أطباق بلدي أصيلة بتتحضر بحب وشغف</p>
       </div>
 
-      <div class="menu-grid">
+      <!-- id="menuGrid": js/menu.js replaces these cards with data/menu.json.
+           The static cards below stay as a fallback if the file can't load. -->
+      <div class="menu-grid" id="menuGrid">
         <div class="menu-card reveal">
           <div class="menu-card-img">
             <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80" alt="كوارع" loading="lazy">
@@ -413,6 +415,7 @@
       </div>
       <div class="footer-bottom">
         <p>© 2025 <span data-i18n="footer_rights">مطعم ومسمط البرديسي — جميع الحقوق محفوظة</span></p>
+        <p><a href="admin.html" style="opacity:.5;font-size:.8rem">إدارة المنيو</a></p>
       </div>
     </div>
   </footer>
@@ -427,6 +430,7 @@
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/effects.js"></script>
 </body>
 </html>
