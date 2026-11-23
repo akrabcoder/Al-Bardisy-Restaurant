@@ -7,7 +7,7 @@
     owner: 'akrabcoder',
     repo: 'Al-Bardisy-Restaurant',
     branch: 'main',
-    password: 'change-me-123'
+    password: 'BBbb#100300#'
   };
   /* ---------------------------- */
 
@@ -38,15 +38,32 @@
       headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' },
       body: body ? JSON.stringify(body) : undefined
     }).then(function (r) {
-      if (!r.ok) { var e = new Error('HTTP ' + r.status); e.status = r.status; throw e; }
+      if (!r.ok) {
+        return r.json().catch(function () { return {}; }).then(function (j) {
+          var e = new Error('HTTP ' + r.status); e.status = r.status; e.gh = j.message; throw e;
+        });
+      }
       return r.json();
     });
   }
+  function repoInfo() {
+    return fetch('https://api.github.com/repos/' + CFG.owner + '/' + CFG.repo, {
+      headers: { Authorization: 'Bearer ' + token, Accept: 'application/vnd.github+json' }
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) { var e = new Error('HTTP ' + r.status); e.status = r.status; e.gh = j.message; throw e; }
+        return j;
+      });
+    });
+  }
   function explain(e) {
-    if (e.status === 401 || e.status === 403) return 'التوكن غلط أو منتهي أو مالوش صلاحية كتابة على الريبو.';
-    if (e.status === 404) return 'الريبو أو الفرع مش موجود. راجع الإعدادات في أول ملف admin.js.';
-    if (e.status === 409 || e.status === 422) return 'حصل تعارض في الحفظ. حدّث الصفحة وجرّب تاني.';
-    return 'حصلت مشكلة في الاتصال. جرّب تاني.';
+    var tail = ' [' + (e.status || 'network') + (e.gh ? ': ' + e.gh : '') + ']';
+    var who = CFG.owner + '/' + CFG.repo;
+    if (e.status === 401) return 'التوكن غلط أو منتهي. اعمل توكن جديد.' + tail;
+    if (e.status === 403) return 'التوكن مالوش صلاحية Contents: Read and write على الريبو.' + tail;
+    if (e.status === 404) return 'مش لاقي الريبو ' + who + '. اتأكد من الاسم، ولو الريبو private لازم التوكن يكون محدد عليه، لأن GitHub بيرجّع نفس الخطأ للريبو المخفي.' + tail;
+    if (e.status === 409 || e.status === 422) return 'حصل تعارض في الحفظ. حدّث الصفحة وجرّب تاني.' + tail;
+    return 'حصلت مشكلة في الاتصال. جرّب تاني.' + tail;
   }
 
   /* ---- login ---- */
@@ -74,14 +91,24 @@
     if (!token) return show('tokenBox');
     show('panel');
     msg('بنحمّل المنيو...');
-    api('data/menu.json').then(function (f) {
-      sha = f.sha;
-      data = JSON.parse(dec(f.content));
-      msg('');
-      render();
+    var readOnly = false;
+    repoInfo().then(function (info) {
+      CFG.branch = info.default_branch || CFG.branch;
+      readOnly = !!(info.permissions && info.permissions.push === false);
+      return api('data/menu.json').then(function (f) {
+        sha = f.sha;
+        data = JSON.parse(dec(f.content));
+        msg(''); render();
+      }, function (e) {
+        if (e.status !== 404) throw e;
+        sha = null; render();
+        msg('ملف data/menu.json مش موجود في الريبو. ارفعه في فولدر data الأول عشان الأطباق الحالية تظهر هنا.', true);
+      });
+    }).then(function () {
+      if (readOnly) msg('التوكن يقدر يقرا بس. فعّل Contents: Read and write عشان تقدر تحفظ.', true);
     }).catch(function (e) {
-      if (e.status === 404) { sha = null; msg(''); render(); }
-      else { msg(explain(e), true); if (e.status === 401) { localStorage.removeItem(TOKEN_KEY); token = ''; } }
+      msg(explain(e), true);
+      if (e.status === 401) { localStorage.removeItem(TOKEN_KEY); token = ''; }
     });
   }
 
